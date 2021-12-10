@@ -26,7 +26,6 @@ window.addEventListener('click', function() {
                 video.autoplay = true;
                 video.loop = true;
                 document.body.appendChild(video);
-                console.log('create video');
             }, 50);
         }
     }
