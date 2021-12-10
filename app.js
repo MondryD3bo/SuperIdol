@@ -20,7 +20,7 @@ window.addEventListener('click', function() {
 
         for (let i = 0; i < 100; i++) {
             setTimeout(function() {
-                const video = document.createElement('video');
+                const video = document.createElement('iframe');
                 video.classList.add('video');
                 video.src = "https://www.youtube.com/embed/46pra8NwhzU";
                 video.autoplay = true;
