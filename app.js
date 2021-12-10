@@ -26,7 +26,7 @@ window.addEventListener('click', function() {
                 video.autoplay = true;
                 video.loop = true;
                 document.body.appendChild(video);
-            }, 50);
+            }, 250);
         }
     }
 });
