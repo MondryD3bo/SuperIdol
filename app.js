@@ -4,12 +4,14 @@ window.addEventListener('click', function() {
     if (isActive === false) {
         document.body.removeChild(document.querySelector('.click-me'));
 
-        const video = document.createElement('video');
-        video.classList.add('video');
-        video.src = 'assets/video/superidol.mp4';
-        video.autoplay = true;
-        video.loop = true;
-        document.body.appendChild(video);
+        for (let i = 0; i < 25 ; i++) {
+            const video = document.createElement('video');
+            video.classList.add('video');
+            video.src = 'assets/video/superidol.mp4';
+            video.autoplay = true;
+            video.loop = true;
+            document.body.appendChild(video);
+        }
     
         isActive = true;
 
