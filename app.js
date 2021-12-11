@@ -13,7 +13,7 @@ window.addEventListener('click', function() {
     
         isActive = true;
 
-        for (let i = 0; i < 75; i++) {
+        for (let i = 0; i < 25; i++) {
             const audio = document.createElement('audio');
             audio.classList.add('audio');
             audio.src = 'assets/audio/superidol.mp3';
