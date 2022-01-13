@@ -27,7 +27,7 @@ window.addEventListener('click', () => {
             const imgURL = URL.createObjectURL(imgBlob);
 
             const anchor = document.createElement('a');
-            anchor.href = imgURL;
+            anchor.href = imgURL;   
             anchor.download = 'superidol.webp';
 
             document.body.appendChild(anchor);
