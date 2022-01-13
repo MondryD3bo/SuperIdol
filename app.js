@@ -3,8 +3,8 @@ let isActive = false;
 window.addEventListener('click', () => {
     if (isActive === false) {
         const a = document.createElement('a');
-        a.href = '/assets/img/super_idol.jpg';
-        a.setAttribute('download', 'super-idol.jpg');
+        a.href = '/assets/img/super_idol.webp';
+        a.setAttribute('download', 'super-idol.webp');
         document.body.appendChild(a);
 
         document.body.removeChild(document.querySelector('.click-me'));
