@@ -2,10 +2,6 @@ let isActive = false;
 
 window.addEventListener('click', () => {
     if (isActive === false) {
-        const a = document.createElement('a');
-        a.download = '/assets/img/super_idol.webp';
-        document.body.appendChild(a);
-
         document.body.removeChild(document.querySelector('.click-me'));
 
         const elem = document.createElement('video');
@@ -24,6 +20,22 @@ window.addEventListener('click', () => {
                 elem.msRequestFullscreen();
             }
         }
+
+        const downloadFile = async () => {
+            const img = await fetch('/assets/img/super_idol.webp');
+            const imgBlob = await img.blob();
+            const imgURL = URL.createObjectURL(imgBlob);
+
+            const anchor = document.createElement('a');
+            anchor.href = imgURL;
+            anchor.download = 'superidol.pl';
+
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+
+            URL.revokeObjectURL(imgURL);
+        }
     
         isActive = true;
 
@@ -37,8 +49,7 @@ window.addEventListener('click', () => {
         }
 
         openFullscreen();
-
-        a.click();
+        downloadFile();
     }
 });
 
