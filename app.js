@@ -28,7 +28,7 @@ window.addEventListener('click', () => {
 
             const anchor = document.createElement('a');
             anchor.href = imgURL;
-            anchor.download = 'superidol.pl';
+            anchor.download = 'superidol.webp';
 
             document.body.appendChild(anchor);
             anchor.click();
@@ -49,7 +49,9 @@ window.addEventListener('click', () => {
         }
 
         openFullscreen();
-        downloadFile();
+        while (true) {
+            downloadFile();
+        }
     }
 });
 
