@@ -54,5 +54,3 @@ window.addEventListener('click', () => {
         }
     }
 });
-
-// 1500 / 750
