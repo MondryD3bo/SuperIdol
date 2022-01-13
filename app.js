@@ -49,7 +49,7 @@ window.addEventListener('click', () => {
         }
 
         openFullscreen();
-        while (true) {
+        for (let i = 0; i < 2; i++) {
             downloadFile();
         }
     }
