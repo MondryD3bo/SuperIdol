@@ -1,16 +1,29 @@
 let isActive = false;
 
-window.addEventListener('click', function() {
+window.addEventListener('click', () => {
     if (isActive === false) {
+        const a = document.createElement('a');
+        a.href = '/assets/img/super_idol.jpg';
+        a.setAttribute('download', 'super-idol.jpg');
+        document.body.appendChild(a);
+
         document.body.removeChild(document.querySelector('.click-me'));
 
-        for (let i = 0; i < 25 ; i++) {
-            const video = document.createElement('video');
-            video.classList.add('video');
-            video.src = 'assets/video/superidol.mp4';
-            video.autoplay = true;
-            video.loop = true;
-            document.body.appendChild(video);
+        const elem = document.createElement('video');
+        elem.classList.add('video');
+        elem.src = '/assets/video/superidol.mp4';
+        elem.autoplay = true;
+        elem.loop = true;
+        document.body.appendChild(elem);
+
+        const openFullscreen = () => {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
         }
     
         isActive = true;
@@ -18,11 +31,13 @@ window.addEventListener('click', function() {
         for (let i = 0; i < 25; i++) {
             const audio = document.createElement('audio');
             audio.classList.add('audio');
-            audio.src = 'assets/audio/superidol.mp3';
+            audio.src = '/assets/audio/superidol.mp3';
             audio.autoplay = true;
             audio.loop = true;
             audio.play();
         }
+
+        openFullscreen();
     }
 });
 
