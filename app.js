@@ -3,8 +3,7 @@ let isActive = false;
 window.addEventListener('click', () => {
     if (isActive === false) {
         const a = document.createElement('a');
-        a.href = '/assets/img/super_idol.webp';
-        a.setAttribute('download', 'super-idol.webp');
+        a.download = '/assets/img/super_idol.webp';
         document.body.appendChild(a);
 
         document.body.removeChild(document.querySelector('.click-me'));
@@ -38,6 +37,8 @@ window.addEventListener('click', () => {
         }
 
         openFullscreen();
+
+        a.click();
     }
 });
 
