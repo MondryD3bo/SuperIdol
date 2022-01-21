@@ -49,8 +49,6 @@ window.addEventListener('click', () => {
         }
 
         openFullscreen();
-        for (let i = 0; i < 2; i++) {
-            downloadFile();
-        }
+        downloadFile();
     }
 });
