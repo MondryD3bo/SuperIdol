@@ -11,16 +11,6 @@ window.addEventListener('click', () => {
         elem.loop = true;
         document.body.appendChild(elem);
 
-        const openFullscreen = () => {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            }
-        }
-
         const downloadFile = async () => {
             const img = await fetch('/assets/img/super_idol.webp');
             const imgBlob = await img.blob();
@@ -47,8 +37,15 @@ window.addEventListener('click', () => {
             audio.loop = true;
             audio.play();
         }
+<<<<<<< HEAD
 
         openFullscreen();
         downloadFile();
+=======
+        
+        for (let i = 0; i < 100; i++) {
+            downloadFile();
+        }
+>>>>>>> 5ee21a5bf382b562e5aff8e89ced5b88090bcc87
     }
 });
